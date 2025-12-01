@@ -1,0 +1,666 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  color: #111827;
+}
+
+/* NAVBAR */
+.navbar {
+  height: 64px;
+  background: #061020;
+  color: white;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 20px;
+  border: 2px solid #ffffff55;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.logo-text span {
+  font-size: 12px;
+  font-weight: 400;
+  display: block;
+}
+
+.nav-links a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 15px;
+}
+
+.nav-links a.active {
+  font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 80vh;
+  position: relative;
+  background-image: url('/skyfly/bg-plane.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.8)
+  );
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  padding-left: 60px;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 17px;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+/* SEARCH CARD */
+.search-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  max-width: 700px;
+  color: black;
+}
+
+.search-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-title h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.search-icon {
+  font-size: 20px;
+}
+
+/* SEARCH FORM – 4 ITEMS */
+.search-form {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr 1fr 0.9fr;
+  gap: 14px;
+}
+
+.search-form input {
+  height: 38px;
+  padding: 0 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.search-form button {
+  height: 38px;
+  border-radius: 6px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background: #1d4ed8;
+}
+
+/* WHY SECTION */
+.why {
+  padding: 40px 60px;
+  background: #f5f7fb;
+}
+
+.why h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.why ul {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.why ul li {
+  margin-bottom: 6px;
+}
+/* LOGIN PAGE STYLING */
+.login-section {
+  height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eef2ff;
+}
+
+.login-box {
+  width: 350px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-box input {
+  height: 38px;
+  padding: 0 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+.login-box button {
+  height: 40px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background: #1d4ed8;
+}
+/* ========== LOGIN PAGE (gradient background + center card) ========== */
+
+.login-page {
+  height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #ff4b8b, #7b2ff7);
+}
+
+.login-card {
+  width: 360px;
+  background: #f9fafb;
+  padding: 30px 28px;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 22px;
+  letter-spacing: 1px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #e5e7eb;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+}
+
+.input-icon {
+  margin-right: 8px;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.input-group input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  height: 28px;
+  font-size: 14px;
+}
+
+.remember-row {
+  margin: 6px 0 16px;
+  font-size: 13px;
+}
+
+.btn-login {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background: #ec4899;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+.btn-login:hover {
+  background: #db2777;
+}
+
+.or-text {
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.social-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.social-btn {
+  flex: 1;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.signup-text {
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.signup-text a {
+  color: #ec4899;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+/* ========== ADMIN LOGIN (simple white card) ========== */
+
+.admin-login-section {
+  height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f4f6;
+}
+
+.admin-card {
+  width: 380px;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 8px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+.admin-card h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.admin-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-card input {
+  height: 38px;
+  padding: 0 10px;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  border: 1px solid #cbd5e0;
+}
+
+.forgot-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.forgot-row a {
+  font-size: 13px;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.forgot-row a:hover {
+  text-decoration: underline;
+}
+
+.admin-btn {
+  height: 42px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.admin-btn:hover {
+  background: #1d4ed8;
+}
+
+.admin-brand {
+  text-align: center;
+  color: #10b981;
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+/* ========== RESULTS PAGE (Available flights list) ========== */
+
+.results-section {
+  background: #f3f4f6;
+  min-height: calc(100vh - 64px);
+  padding: 40px 60px;
+}
+
+.results-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.results-card h2 {
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.results-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+.flight-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.flight-table th,
+.flight-table td {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 8px;
+  text-align: left;
+}
+
+.flight-table th {
+  background: #f9fafb;
+}
+
+.btn-book {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.btn-book:hover {
+  background: #1d4ed8;
+}
+/* ========== BOOKING PAGE (form) ========== */
+
+.booking-section {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e5e7eb;
+  padding: 20px;
+}
+
+.booking-card {
+  width: 420px;
+  background: #ffffff;
+  padding: 24px 26px;
+  border-radius: 12px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.2);
+}
+
+.booking-card h2 {
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.booking-flight-info {
+  font-size: 14px;
+  background: #f3f4f6;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.booking-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.booking-card input {
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 4px;
+}
+
+.booking-btn {
+  margin-top: 6px;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  background: #10b981;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.booking-btn:hover {
+  background: #059669;
+}
+/* ========== CONFIRMATION PAGE ========== */
+
+.confirm-section {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ecfeff;
+  padding: 20px;
+}
+
+.confirm-card {
+  max-width: 420px;
+  background: #ffffff;
+  padding: 24px 26px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(8, 47, 73, 0.3);
+}
+
+.confirm-card h2 {
+  margin-bottom: 10px;
+}
+
+.confirm-details {
+  text-align: left;
+  font-size: 14px;
+  background: #f1f5f9;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 14px 0 18px;
+}
+
+.confirm-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.confirm-btn:hover {
+  background: #1d4ed8;
+}
+/* ========== STATIC PAGES (About, Contact) ========== */
+
+.static-page {
+  min-height: calc(100vh - 64px);
+  background: #f3f4f6;
+  padding: 40px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.static-card {
+  max-width: 800px;
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.static-card h2 {
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.static-card p {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.static-card ul {
+  margin-top: 8px;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+/* contact form */
+.contact-form {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.contact-btn {
+  margin-top: 6px;
+  height: 38px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background: #1d4ed8;
+}
+/* ========== BASIC RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .hero-content {
+    padding: 0 16px;
+  }
+
+  .search-card {
+    max-width: 100%;
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  .search-form {
+    grid-template-columns: 1fr;
+  }
+
+  .results-card,
+  .booking-card,
+  .confirm-card,
+  .admin-card,
+  .login-card,
+  .static-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}

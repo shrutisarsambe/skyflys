@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up - SkyFly</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo-icon">✈</div>
+      <div class="logo-text">SkyFly <span>Airlines</span></div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="login.html">Passenger Login</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <!-- same gradient background -->
+  <section class="login-page">
+    <div class="login-card">
+      <h2>CREATE ACCOUNT</h2>
+<form action="signup.php" method="POST">
+  <div class="input-group">
+    <span class="input-icon">👤</span>
+    <input type="text" name="name" placeholder="Full name" required>
+  </div>
+
+  <div class="input-group">
+    <span class="input-icon">✉</span>
+    <input type="email" name="email" placeholder="Email" required>
+  </div>
+
+  <div class="input-group">
+    <span class="input-icon">🔒</span>
+    <input type="password" name="password" placeholder="Password" required>
+  </div>
+
+  <div class="input-group">
+    <span class="input-icon">🔒</span>
+    <input type="password" name="cpassword" placeholder="Confirm password" required>
+  </div>
+
+  <button type="submit" name="signup" class="btn-login">Sign Up</button>
+
+  <p class="signup-text">
+    Already have an account?
+    <a href="login.html">Login here</a>
+  </p>
+</form>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>

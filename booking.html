@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flight Booking - SkyFly</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo-icon">✈</div>
+      <div class="logo-text">SkyFly <span>Airlines</span></div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="login.html">Passenger Login</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <!-- BOOKING SECTION -->
+  <section class="booking-section">
+    <div class="booking-card">
+      <h2>Flight Booking</h2>
+
+      <!-- SELECTED FLIGHT INFO (DISPLAY ONLY) -->
+      <div class="booking-flight-info">
+        <p><b>Flight:</b> SF101</p>
+        <p><b>Route:</b> Mumbai ➝ Delhi</p>
+        <p><b>Date:</b> 12/12/2025 &nbsp;&nbsp; <b>Time:</b> 09:30</p>
+        <p><b>Price:</b> ₹5,500</p>
+      </div>
+
+      <!-- BOOKING FORM (BACKEND CONNECTED) -->
+      <!-- इथे action="booking.php" आणि method="POST" खूप important -->
+      <form action="booking.php" method="POST">
+
+  <!-- Hidden values (flight info) -->
+  <input type="hidden" name="flight_no"   value="SF101">
+  <input type="hidden" name="from_city"   value="Mumbai">
+  <input type="hidden" name="to_city"     value="Delhi">
+  <input type="hidden" name="travel_date" value="2025-12-12">
+  <input type="hidden" name="depart_time" value="09:30">
+  <input type="hidden" name="price"       value="5500">
+
+  <!-- Passenger fields -->
+  <label>Passenger Name</label>
+  <input type="text" name="passenger_name" required>
+
+  <label>Email</label>
+  <input type="email" name="email" required>
+
+  <label>Phone</label>
+  <input type="tel" name="phone" required>
+
+  <label>No. of Passengers</label>
+  <input type="number" name="passengers" min="1" value="1" required>
+
+  <button type="submit" class="booking-btn">Confirm Booking</button>
+</form>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>

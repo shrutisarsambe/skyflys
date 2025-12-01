@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Passenger Login - SkyFly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+        <div class="logo-icon">✈</div>
+        <div class="logo-text">SkyFly <span>Airlines</span></div>
+    </div>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="login.html" class="active">Passenger Login</a>
+        <a href="admin.html">Admin</a>
+    </nav>
+</header>
+
+<!-- LOGIN SECTION -->
+<section class="login-page">
+    <div class="login-card">
+        <h2>Passenger Login</h2>
+
+        <!-- ********* FORM PROPERLY OPEN HERE ********* -->
+        <form action="passenger_login.php" method="POST" class="login-form">
+
+            <div class="input-group">
+                <span class="input-icon">@</span>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="input-group">
+                <span class="input-icon">🔒</span>
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+
+            <button type="submit" class="btn-login">Sign In</button>
+
+        </form>
+        <!-- ********* FORM CLOSES HERE ********* -->
+
+        <p class="signup-text">
+            Don't have an account?
+            <a href="signup.php">Sign up</a>
+        </p>
+
+    </div>
+</section>
+
+<script src="main.js"></script>
+</body>
+</html>
